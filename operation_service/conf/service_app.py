@@ -10,7 +10,9 @@ from operation_service.conf.config_logger_setup import setup_config_logger
 from operation_service.session.interfaces import DBInterface
 from flask.ext.cors import CORS
 from operation_service.service_apis.ping import Ping
-
+from operation_service.service_apis.orders import SaleOrders
+from operation_service.service_apis.client_history import ClientHistory
+from operation_service.service_apis.order_search import OrderSearch
 
 close_old_connections()
 init_pool()
@@ -28,6 +30,9 @@ setup_config_logger(app)
 
 app.logger.info("Setting up Resources")
 api.add_resource(Ping, '/operationservice/ping/')
+api.add_resource(SaleOrders, '/operationservice/orders/')
+api.add_resource(ClientHistory, '/operationservice/client_history/')
+api.add_resource(OrderSearch, '/operationservice/order_search/')
 
 app.logger.info("Resource setup done")
 
