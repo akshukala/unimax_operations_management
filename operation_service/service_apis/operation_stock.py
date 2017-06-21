@@ -1,3 +1,9 @@
+'''
+    @author = Ganesh Bodkhe
+    date = 2017-06-17 15:00
+'''
+
+
 from uni_db.inventory.models import Stock
 from operation_service.utils.resource import Resource
 
