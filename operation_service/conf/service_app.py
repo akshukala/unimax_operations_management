@@ -13,6 +13,7 @@ from operation_service.service_apis.ping import Ping
 from operation_service.service_apis.orders import SaleOrders
 from operation_service.service_apis.client_history import ClientHistory
 from operation_service.service_apis.order_search import OrderSearch
+from operation_service.service_apis.operation_stock import InventoryStock
 
 close_old_connections()
 init_pool()
@@ -33,6 +34,7 @@ api.add_resource(Ping, '/operationservice/ping/')
 api.add_resource(SaleOrders, '/operationservice/orders/')
 api.add_resource(ClientHistory, '/operationservice/client_history/')
 api.add_resource(OrderSearch, '/operationservice/order_search/')
+api.add_resource(InventoryStock, '/operationservice/stock/')
 
 app.logger.info("Resource setup done")
 
